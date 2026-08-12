@@ -16,7 +16,7 @@ export const partners: Partner[] = [
     id: 2,
     name: "TGEM",
     logo: "/logos/tgem.jpg",
-    href: "#",
+    href: "https://tgem.tj/",
   },
   {
     id: 3,
