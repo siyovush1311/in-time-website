@@ -1,22 +1,11 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+﻿import type { Metadata } from "next";
 
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "IN TIME — Бюро переводов",
   description:
-    "Профессиональное бюро переводов. Более 50 языков мира. Апостиль, нотариальное заверение, легализация документов.",
+    "Профессиональное бюро переводов IN TIME в Таджикистане. Переводы на 50+ языков мира, нотариальное заверение, апостиль, легализация документов и медицинская страховка для виз.",
 };
 
 export default function RootLayout({
@@ -25,10 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ru"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="ru" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-[#050816]">
         {children}
       </body>
