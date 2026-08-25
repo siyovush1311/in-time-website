@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 
 interface OrbitItemProps {
-  icon: LucideIcon;
   label: string;
+  flag?: string;
+  icon?: LucideIcon;
 }
 
 export default function OrbitItem({
+  flag,
   icon: Icon,
   label,
 }: OrbitItemProps) {
@@ -28,33 +30,43 @@ export default function OrbitItem({
       }}
       whileHover={{
         scale: 1.08,
-        y: -6,
+        y: -5,
       }}
       className="
         flex
         items-center
-        gap-3
+        gap-2.5
         rounded-full
         border
-        border-white/10
-        bg-white/5
-        px-5
-        py-3
+        border-cyan-400/20
+        bg-[#071526]/85
+        px-4
+        py-2.5
         backdrop-blur-xl
-        shadow-[0_0_30px_rgba(0,180,255,0.08)]
+        shadow-[0_0_25px_rgba(0,190,255,0.10)]
         transition-all
         duration-300
-        hover:border-cyan-400/50
-        hover:bg-white/10
-        hover:shadow-[0_0_35px_rgba(0,200,255,0.25)]
+        hover:border-cyan-400/60
+        hover:bg-[#0a1d31]/95
+        hover:shadow-[0_0_35px_rgba(0,210,255,0.28)]
       "
     >
-      <Icon
-        size={18}
-        className="text-cyan-400"
-      />
+      {flag ? (
+        <span
+          className="text-[20px] leading-none"
+          role="img"
+          aria-label={label}
+        >
+          {flag}
+        </span>
+      ) : Icon ? (
+        <Icon
+          size={18}
+          className="text-cyan-400"
+        />
+      ) : null}
 
-      <span className="whitespace-nowrap text-sm font-medium text-white">
+      <span className="whitespace-nowrap text-sm font-semibold text-white">
         {label}
       </span>
     </motion.div>
