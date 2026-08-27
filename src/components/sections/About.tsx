@@ -1,224 +1,247 @@
 ﻿"use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-
-const translators = [
-  {
-    name: "Переводчик 01",
-    role: "Старший переводчик",
-    languages: "Русский • Таджикский • Английский",
-    education: "Высшее лингвистическое образование",
-    status: "Демонстрационный профиль",
-  },
-  {
-    name: "Переводчик 02",
-    role: "Переводчик",
-    languages: "Русский • Таджикский • Английский",
-    education: "Высшее образование",
-    status: "Демонстрационный профиль",
-  },
-  {
-    name: "Переводчик 03",
-    role: "Переводчик",
-    languages: "Русский • Таджикский • Английский",
-    education: "Высшее образование",
-    status: "Демонстрационный профиль",
-  },
-];
 
 export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[#050816] px-6 py-24 scroll-mt-24"
+      className="relative overflow-hidden bg-[#050816] px-6 py-16 scroll-mt-24"
     >
-      <div className="mx-auto max-w-7xl">
+      {/* Background glow */}
+      <div className="pointer-events-none absolute left-1/2 top-10 h-[420px] w-[650px] -translate-x-1/2 rounded-full bg-cyan-500/[0.05] blur-[120px]" />
 
-        {/* Заголовок */}
+      <div className="relative mx-auto max-w-6xl">
+
+        {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mx-auto mb-20 max-w-3xl text-center"
+          transition={{ duration: 0.6 }}
+          className="mx-auto mb-10 max-w-3xl text-center"
         >
-          <span className="inline-flex rounded-full border border-cyan-500/30 bg-cyan-500/10 px-5 py-2 text-sm font-medium text-cyan-300">
+          <span className="inline-flex rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-sm font-medium text-cyan-300">
             О компании IN TIME
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
-            Люди, которым можно доверить
-            <span className="text-cyan-400"> ваши документы</span>
+          <h2 className="mt-4 text-3xl font-bold leading-tight text-white md:text-4xl">
+            Люди, которым можно доверить{" "}
+            <span className="text-cyan-400">ваши документы</span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-400">
-            IN TIME — современное бюро переводов, объединяющее
-            профессиональных переводчиков и специалистов по работе
-            с официальными документами.
+          <p className="mt-4 text-base leading-7 text-slate-400">
+            IN TIME — современное бюро переводов с профессиональным
+            подходом к переводам и работе с официальными документами.
           </p>
         </motion.div>
 
-        {/* Основатель */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="grid items-center gap-12 rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl md:p-12 lg:grid-cols-[380px_1fr]"
-        >
-
-          {/* Фото-заглушка */}
-          <div className="relative mx-auto w-full max-w-sm">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl border border-cyan-400/20 bg-gradient-to-br from-slate-800 via-slate-900 to-cyan-950/40 shadow-[0_0_60px_rgba(0,200,255,0.12)]">
-              <div className="flex h-full flex-col items-center justify-center p-8 text-center">
-                <div className="mb-5 flex h-24 w-24 items-center justify-center rounded-full border border-cyan-400/30 bg-cyan-400/10 text-5xl">
-                  👤
-                </div>
-
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-cyan-400">
-                  Фото основателя
-                </p>
-
-                <p className="mt-3 text-sm text-slate-500">
-                  Будет добавлено после получения фотографии
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Информация */}
-          <div>
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
-              Основатель и руководитель
-            </span>
-
-            <h3 className="mt-4 text-4xl font-bold text-white">
-              Имя Фамилия
-            </h3>
-
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              Основатель IN TIME и руководитель команды переводчиков.
-              Здесь будет размещена официальная информация об основателе,
-              профессиональном опыте, образовании и направлениях деятельности.
-            </p>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                <div className="text-2xl">🎓</div>
-                <h4 className="mt-3 font-semibold text-white">
-                  Образование
-                </h4>
-                <p className="mt-2 text-sm text-slate-400">
-                  Информация будет добавлена
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                <div className="text-2xl">🌍</div>
-                <h4 className="mt-3 font-semibold text-white">
-                  Языки
-                </h4>
-                <p className="mt-2 text-sm text-slate-400">
-                  Информация будет добавлена
-                </p>
-              </div>
-
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Команда */}
+        {/* Founder card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mt-24"
+          className="
+            relative
+            overflow-hidden
+            rounded-[1.75rem]
+            border
+            border-white/10
+            bg-white/[0.035]
+            p-5
+            shadow-[0_0_60px_rgba(0,200,255,0.06)]
+            backdrop-blur-xl
+            md:p-7
+          "
         >
-          <div className="mb-12 text-center">
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
-              Наша команда
-            </span>
+          {/* Glow */}
+          <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-cyan-400/10 blur-[100px]" />
 
-            <h3 className="mt-4 text-4xl font-bold text-white">
-              Профессиональные переводчики
-            </h3>
+          <div className="relative grid items-center gap-8 md:grid-cols-[280px_1fr] lg:grid-cols-[310px_1fr]">
 
-            <p className="mx-auto mt-4 max-w-2xl text-slate-400">
-              На странице будут представлены реальные специалисты IN TIME,
-              их языковые направления, образование, дипломы и сертификаты.
-            </p>
-          </div>
+            {/* Founder photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative mx-auto w-full max-w-[310px]"
+            >
+              <div className="absolute -inset-2 rounded-[1.5rem] bg-cyan-400/10 blur-xl" />
 
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {translators.map((translator, index) => (
-              <motion.div
-                key={translator.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(0,200,255,0.15)]"
+              <div
+                className="
+                  relative
+                  aspect-[4/5]
+                  overflow-hidden
+                  rounded-[1.5rem]
+                  border
+                  border-cyan-400/25
+                  bg-[#0b1629]
+                  shadow-[0_0_40px_rgba(0,200,255,0.12)]
+                "
               >
+                <Image
+                  src="/founder.jpg"
+                  alt="Бобоев Шаҳзодҷон Комилҷонович — основатель IN TIME"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 90vw, 310px"
+                  className="object-cover object-top"
+                />
 
-                {/* Фото */}
-                <div className="aspect-[4/5] bg-gradient-to-br from-slate-800 via-slate-900 to-cyan-950/30">
-                  <div className="flex h-full flex-col items-center justify-center text-center">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/30 bg-cyan-400/10 text-4xl">
-                      👤
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050816]/50 via-transparent to-transparent" />
+              </div>
+
+              {/* Badge */}
+              <div
+                className="
+                  absolute
+                  -bottom-3
+                  left-1/2
+                  -translate-x-1/2
+                  whitespace-nowrap
+                  rounded-full
+                  border
+                  border-cyan-400/30
+                  bg-[#071426]/95
+                  px-4
+                  py-1.5
+                  text-[11px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.15em]
+                  text-cyan-300
+                  shadow-[0_0_20px_rgba(0,200,255,0.15)]
+                  backdrop-blur-xl
+                "
+              >
+                Основатель IN TIME
+              </div>
+            </motion.div>
+
+            {/* Founder information */}
+            <div className="min-w-0">
+
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">
+                Основатель и руководитель
+              </span>
+
+              <h3 className="mt-3 text-3xl font-bold leading-tight text-white md:text-4xl">
+                Бобоев Шаҳзодҷон
+                <br className="hidden sm:block" />
+                Комилҷонович
+              </h3>
+
+              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">
+                Профессиональная деятельность связана с лингвистикой,
+                переводом и организацией работы бюро переводов.
+                Наша миссия — помогать людям понимать друг друга, преодолевая языковые и культурные границы.
+              </p>
+
+              {/* Main information */}
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+
+                {/* Degree */}
+                <div
+                  className="
+                    rounded-xl
+                    border
+                    border-white/10
+                    bg-white/[0.03]
+                    p-4
+                    transition
+                    duration-300
+                    hover:border-cyan-400/30
+                  "
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="text-xl">🎓</div>
+
+                    <div>
+                      <h4 className="text-sm font-semibold text-white">
+                        Степень
+                      </h4>
+
+                      <p className="mt-1 text-sm text-slate-400">
+                        Магистр
+                      </p>
                     </div>
+                  </div>
+                </div>
 
-                    <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-400">
-                      Фото переводчика
+                {/* Qualification */}
+                <div
+                  className="
+                    rounded-xl
+                    border
+                    border-white/10
+                    bg-white/[0.03]
+                    p-4
+                    transition
+                    duration-300
+                    hover:border-cyan-400/30
+                  "
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="text-xl">🌍</div>
+
+                    <div>
+                      <h4 className="text-sm font-semibold text-white">
+                        Квалификация
+                      </h4>
+
+                      <p className="mt-1 text-sm leading-5 text-slate-400">
+                        Языковед, переводчик с английского языка
+                        на таджикский язык
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Education */}
+              <div
+                className="
+                  mt-3
+                  rounded-xl
+                  border
+                  border-cyan-400/15
+                  bg-cyan-400/[0.035]
+                  p-4
+                "
+              >
+                <div className="flex items-start gap-3">
+
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-cyan-400/20 bg-cyan-400/10 text-lg">
+                    📚
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-white">
+                      Образование и специализация
+                    </h4>
+
+                    <p className="mt-1.5 text-sm leading-6 text-slate-400">
+                      Степень магистра по направлению{" "}
+                      <span className="font-medium text-slate-200">
+                        «Лингвистические науки»
+                      </span>
+                      , специальность{" "}
+                      <span className="font-medium text-slate-200">
+                        «Современные иностранные языки»
+                      </span>
+                      .
                     </p>
                   </div>
+
                 </div>
+              </div>
 
-                <div className="p-7">
-                  <span className="text-xs font-medium uppercase tracking-wider text-cyan-400">
-                    {translator.role}
-                  </span>
-
-                  <h4 className="mt-2 text-2xl font-bold text-white">
-                    {translator.name}
-                  </h4>
-
-                  <div className="mt-5 space-y-4 text-sm">
-                    <div>
-                      <span className="text-slate-500">
-                        🌍 Языки
-                      </span>
-                      <p className="mt-1 text-slate-300">
-                        {translator.languages}
-                      </p>
-                    </div>
-
-                    <div>
-                      <span className="text-slate-500">
-                        🎓 Образование
-                      </span>
-                      <p className="mt-1 text-slate-300">
-                        {translator.education}
-                      </p>
-                    </div>
-
-                    <div>
-                      <span className="text-slate-500">
-                        📄 Дипломы и сертификаты
-                      </span>
-                      <p className="mt-1 text-slate-300">
-                        Будут добавлены
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 rounded-xl border border-cyan-400/10 bg-cyan-400/5 px-4 py-3 text-xs text-cyan-300">
-                    {translator.status}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+            </div>
           </div>
         </motion.div>
 
