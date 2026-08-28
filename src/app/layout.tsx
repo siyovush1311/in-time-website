@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 
 import "./globals.css";
+import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://intime.tj"),
@@ -49,7 +50,6 @@ export const metadata: Metadata = {
   ],
 
   creator: "IN TIME — Бюро переводов",
-
   publisher: "IN TIME — Бюро переводов",
 
   alternates: {
@@ -96,6 +96,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-[#050816]">
+        <LocalBusinessSchema />
         {children}
       </body>
     </html>

@@ -1,4 +1,4 @@
-export default function LocalBusinessSchema() {
+﻿export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -15,13 +15,13 @@ export default function LocalBusinessSchema() {
     telephone: "+992902814477",
 
     description:
-      "Бюро переводов IN TIME в Душанбе. Письменный и устный перевод документов, нотариальное заверение, апостиль, легализация и другие услуги перевода.",
+      "Бюро переводов IN TIME в Душанбе, Таджикистан. Письменный и устный перевод документов, нотариальное заверение, апостиль, легализация и другие услуги перевода.",
 
     image: "https://intime.tj/founder.jpg",
 
     address: {
       "@type": "PostalAddress",
-      streetAddress: "проспект Рудаки, 83, ЦУМ, 3 этаж, офис 16К",
+      streetAddress: "проспект Рудаки, 83, ЦУМ, 3 этаж, офис 16к",
       addressLocality: "Душанбе",
       addressCountry: "TJ",
     },
@@ -41,6 +41,17 @@ export default function LocalBusinessSchema() {
         "@type": "Country",
         name: "Таджикистан",
       },
+    ],
+
+    serviceType: [
+      "Перевод документов",
+      "Письменный перевод",
+      "Устный перевод",
+      "Нотариальный перевод",
+      "Нотариальное заверение",
+      "Апостиль",
+      "Легализация документов",
+      "Перевод для визы",
     ],
 
     priceRange: "$$",
