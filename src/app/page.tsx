@@ -1,5 +1,4 @@
-﻿import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
-import Header from "@/components/layout/Header";
+﻿import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
@@ -17,9 +16,6 @@ import Footer from "@/components/layout/footer";
 export default function Home() {
   return (
     <main className="bg-[#050816]">
-
-      <LocalBusinessSchema />
-
       <Header />
 
       <Hero />
