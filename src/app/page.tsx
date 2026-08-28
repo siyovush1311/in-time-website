@@ -1,7 +1,9 @@
-﻿import Header from "@/components/layout/Header";
+﻿import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
+import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
+import SEOContent from "@/components/sections/SEOContent";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Process from "@/components/sections/process/Process";
 import Testimonials from "@/components/sections/testimonials/Testimonials";
@@ -15,6 +17,9 @@ import Footer from "@/components/layout/footer";
 export default function Home() {
   return (
     <main className="bg-[#050816]">
+
+      <LocalBusinessSchema />
+
       <Header />
 
       <Hero />
@@ -22,6 +27,8 @@ export default function Home() {
       <Services />
 
       <About />
+
+      <SEOContent />
 
       <WhyChooseUs />
 
