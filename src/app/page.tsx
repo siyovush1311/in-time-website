@@ -2,7 +2,6 @@
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
-import SEOContent from "@/components/sections/SEOContent";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Process from "@/components/sections/process/Process";
 import Testimonials from "@/components/sections/testimonials/Testimonials";
@@ -23,8 +22,6 @@ export default function Home() {
       <Services />
 
       <About />
-
-      <SEOContent />
 
       <WhyChooseUs />
 
